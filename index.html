@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Page Redirection Animation</h2>
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam expedita
+      in fugit sed dolorem est odit pariatur blanditiis ab qui, numquam culpa!
+      Repellendus, sit ea autem libero tempore eos ut?</p>
+    <div class="btn">
+      <button id="redirect">Click Me</button>
+    </div>
+  </div>
+  <div class="loader">
+    <div class="circle"></div>
+  </div>
+  <script>
+    let btnEle = document.getElementById('redirect');
+    let loader = document.querySelector('.loader');
+    let conEle = document.querySelector('.container');
+    btnEle.onclick = function () {
+      conEle.style.display = "none";
+      loader.style.display = "block"
+
+      setTimeout(function () {
+        loader.style.display = "none";
+        window.open("https://www.amazon.in/", "_self")
+
+
+      }, 2000)
+    }
+  </script>
+</body>
+
+</html>
